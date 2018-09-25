@@ -1,4 +1,32 @@
-module Material.Icons.Navigation exposing (..)
+module Material.Icons.Navigation exposing
+    ( apps
+    , arrow_back
+    , arrow_downward
+    , arrow_drop_down
+    , arrow_drop_down_circle
+    , arrow_drop_up
+    , arrow_forward
+    , arrow_upward
+    , cancel
+    , check
+    , chevron_left
+    , chevron_right
+    , close
+    , expand_less
+    , expand_more
+    , first_page
+    , fullscreen
+    , fullscreen_exit
+    , last_page
+    , menu
+    , more_horiz
+    , more_vert
+    , refresh
+    , subdirectory_arrow_left
+    , subdirectory_arrow_right
+    , unfold_less
+    , unfold_more
+    )
 
 {-|
 
@@ -36,9 +64,9 @@ module Material.Icons.Navigation exposing (..)
 -}
 
 import Color exposing (Color)
+import Material.Icons.Internal exposing (icon)
 import Svg exposing (Svg)
 import Svg.Attributes exposing (cx, cy, d, fillOpacity, r)
-import Material.Icons.Internal exposing (icon)
 
 
 {-| -}

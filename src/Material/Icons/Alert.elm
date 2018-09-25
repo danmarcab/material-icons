@@ -1,4 +1,9 @@
-module Material.Icons.Alert exposing (..)
+module Material.Icons.Alert exposing
+    ( add_alert
+    , error
+    , error_outline
+    , warning
+    )
 
 {-|
 
@@ -13,9 +18,9 @@ module Material.Icons.Alert exposing (..)
 -}
 
 import Color exposing (Color)
+import Material.Icons.Internal exposing (icon)
 import Svg exposing (Svg)
 import Svg.Attributes exposing (cx, cy, d, fillOpacity, r)
-import Material.Icons.Internal exposing (icon)
 
 
 {-| -}

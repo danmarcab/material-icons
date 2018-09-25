@@ -1,4 +1,13 @@
-module Material.Icons.Toggle exposing (..)
+module Material.Icons.Toggle exposing
+    ( check_box
+    , check_box_outline_blank
+    , indeterminate_check_box
+    , radio_button_checked
+    , radio_button_unchecked
+    , star
+    , star_border
+    , star_half
+    )
 
 {-|
 
@@ -17,9 +26,9 @@ module Material.Icons.Toggle exposing (..)
 -}
 
 import Color exposing (Color)
+import Material.Icons.Internal exposing (icon)
 import Svg exposing (Svg)
 import Svg.Attributes exposing (cx, cy, d, fillOpacity, r)
-import Material.Icons.Internal exposing (icon)
 
 
 {-| -}

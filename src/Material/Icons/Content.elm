@@ -1,4 +1,46 @@
-module Material.Icons.Content exposing (..)
+module Material.Icons.Content exposing
+    ( add
+    , add_box
+    , add_circle
+    , add_circle_outline
+    , archive
+    , backspace
+    , block
+    , clear
+    , content_copy
+    , content_cut
+    , content_paste
+    , create
+    , delete_sweep
+    , drafts
+    , filter_list
+    , flag
+    , font_download
+    , forward
+    , gesture
+    , inbox
+    , link
+    , low_priority
+    , mail
+    , markunread
+    , move_to_inbox
+    , next_week
+    , redo
+    , remove
+    , remove_circle
+    , remove_circle_outline
+    , reply
+    , reply_all
+    , report
+    , save
+    , select_all
+    , send
+    , sort
+    , text_format
+    , unarchive
+    , undo
+    , weekend
+    )
 
 {-|
 
@@ -50,9 +92,9 @@ module Material.Icons.Content exposing (..)
 -}
 
 import Color exposing (Color)
+import Material.Icons.Internal exposing (icon)
 import Svg exposing (Svg)
 import Svg.Attributes exposing (cx, cy, d, fillOpacity, r)
-import Material.Icons.Internal exposing (icon)
 
 
 {-| -}

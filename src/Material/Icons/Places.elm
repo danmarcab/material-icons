@@ -1,4 +1,24 @@
-module Material.Icons.Places exposing (..)
+module Material.Icons.Places exposing
+    ( ac_unit
+    , airport_shuttle
+    , all_inclusive
+    , beach_access
+    , business_center
+    , casino
+    , child_care
+    , child_friendly
+    , fitness_center
+    , free_breakfast
+    , golf_course
+    , hot_tub
+    , kitchen
+    , pool
+    , room_service
+    , rv_hookup
+    , smoke_free
+    , smoking_rooms
+    , spa
+    )
 
 {-|
 
@@ -28,9 +48,9 @@ module Material.Icons.Places exposing (..)
 -}
 
 import Color exposing (Color)
+import Material.Icons.Internal exposing (icon)
 import Svg exposing (Svg)
 import Svg.Attributes exposing (cx, cy, d, fillOpacity, r)
-import Material.Icons.Internal exposing (icon)
 
 
 {-| -}
