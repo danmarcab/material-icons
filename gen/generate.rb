@@ -12,6 +12,10 @@ SOT_DIR = File.join ROOT, "tmp", "sot"
 OUT_DIR = File.join ROOT, "tmp", "out"
 SKIP_CATS = %w(iconfont sprites)
 
+def escape(s)
+  s.gsub(/ /, '\ ')
+end
+
 
 
 # Setup
@@ -27,12 +31,12 @@ if Dir.exist? SOT_DIR
   %x`git pull origin master`
   Dir.chdir ROOT
 else
-  %x`git clone git@github.com:google/material-design-icons.git #{SOT_DIR}`
+  %x`git clone git@github.com:google/material-design-icons.git #{escape(SOT_DIR)}`
 end
 
 # Categories
 # (ie. absolute paths of the categories)
-CATEGORIES = %x`ls -d #{SOT_DIR}/*/`.split("\n")
+CATEGORIES = %x`ls -d #{escape(SOT_DIR)}/*/`.split("\n")
 
 
 
@@ -112,7 +116,7 @@ CATEGORIES.each do |cat_path|
   next if SKIP_CATS.include?(cat_base)
 
   # find icons
-  svg_files_with_duplicates = %x`ls #{cat_path}svg/production/*.svg`.split("\n")
+  svg_files_with_duplicates = %x`ls #{escape(cat_path)}svg/production/*.svg`.split("\n")
   svg_files = svg_files_with_duplicates.reverse.reduce([]) do |acc, svg_path|
     scan = svg_path.scan(/_(\d+x)?(\d+)px\.svg$/).first
     height = scan[1]
@@ -209,12 +213,15 @@ end
 # Move
 # ====
 
-%x`mv #{OUT_DIR}/* #{ROOT}/src/Material/Icons`
-%x`rm -rf #{OUT_DIR}`
+%x`mv #{escape(OUT_DIR)}/* #{escape(ROOT)}/src/Material/Icons`
+%x`rm -rf #{escape(OUT_DIR)}`
+
+
 
 # Run elm-format
 # ==============
+
 begin
-  %x`elm-format #{ROOT}/src --yes`
+  %x`elm-format #{escape(ROOT)}/src --yes`
 rescue Errno::ENOENT
 end
